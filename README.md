@@ -6,7 +6,7 @@
 🔗 [View Live Project](https://your-username.github.io/project-name)
 
 ## 📌 GitHub Repository
-🔗 [View Source Code](https://github.com/your-username/project-name)
+🔗 [View Source Code](git remote add origin https://github.com/harsheditz79/itzfizz-hero-demo.git)
 
 ---
 
@@ -62,8 +62,7 @@
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/project-name.git
-   cd project-name
+   https://github.com/harsheditz79/itzfizz-hero-demo.git
    ```
 
 2. **Install dependencies**
