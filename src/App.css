@@ -1,0 +1,34 @@
+/* App Container */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-bg-dark);
+  position: relative;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-track-revealed), var(--color-accent-blue));
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #3bc268, #5ab8ed);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-track-revealed) var(--color-bg-dark);
+}

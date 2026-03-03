@@ -1,0 +1,340 @@
+/* Main Hero Container */
+.hero-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: var(--color-bg-side);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Track System Container */
+.track-system {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 204px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  overflow: hidden;
+}
+
+/* Base Black Track */
+.track-base {
+  position: absolute;
+  width: 100%;
+  height: var(--track-height);
+  background: var(--color-track-base);
+  z-index: 1;
+  top: -1px;
+  left: 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Green Revealed Track */
+.track-revealed {
+  position: absolute;
+  width: 100%;
+  height: var(--track-height);
+  background: var(--color-track-revealed);
+  clip-path: inset(0 100% 0 0);
+  z-index: 2;
+  top: -1px;
+  left: 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Text Container */
+.letters-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4.8px;
+  padding: 0 3%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Word Groups */
+.word-group {
+  display: flex;
+  flex-direction: row;
+  gap: 4.8px;
+}
+
+.word-group:first-child {
+  margin-right: 32px;
+}
+
+/* Individual Letter */
+.letter {
+  font-size: 124px;
+  font-weight: 700;
+  color: var(--color-text-on-track);
+  opacity: 1;
+  letter-spacing: normal;
+  font-family: sans-serif;
+  font-stretch: 100%;
+  text-shadow: none;
+  line-height: normal;
+  width: auto;
+  height: auto;
+}
+
+.car {
+  position: absolute;
+  top: 50%;
+  left: -32vw;
+  transform: translateY(-50%);
+  width: clamp(250px, 32vw, 450px);
+  height: auto;
+  z-index: 10;
+  will-change: left;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+
+@media (max-width: 1200px) {
+  .track-system {
+    height: 184px;
+  }
+
+  .track-base,
+  .track-revealed {
+    height: 182px;
+  }
+
+  .letter {
+    font-size: 110px;
+  }
+
+  .letters-container {
+    gap: 4px;
+  }
+
+  .word-group {
+    gap: 4px;
+  }
+
+  .word-group:first-child {
+    margin-right: 28px;
+  }
+
+  .car {
+    left: -32vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .track-system {
+    height: 164px;
+  }
+
+  .track-base,
+  .track-revealed {
+    height: 162px;
+  }
+
+  .letter {
+    font-size: 95px;
+  }
+
+  .letters-container {
+    gap: 3.5px;
+    padding: 0 2%;
+  }
+
+  .word-group {
+    gap: 3.5px;
+  }
+
+  .word-group:first-child {
+    margin-right: 24px;
+  }
+
+  .car {
+    width: clamp(200px, 30vw, 380px);
+    left: -30vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .track-system {
+    height: 144px;
+  }
+
+  .track-base,
+  .track-revealed {
+    height: 142px;
+  }
+
+  .letter {
+    font-size: 75px;
+  }
+
+  .letters-container {
+    gap: 3px;
+    padding: 0 2%;
+  }
+
+  .word-group {
+    gap: 3px;
+  }
+
+  .word-group:first-child {
+    margin-right: 20px;
+  }
+
+  .car {
+    width: clamp(180px, 35vw, 320px);
+    left: -35vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .track-system {
+    height: 124px;
+  }
+
+  .track-base,
+  .track-revealed {
+    height: 122px;
+  }
+
+  .letter {
+    font-size: 60px;
+  }
+
+  .letters-container {
+    gap: 2.5px;
+    padding: 0 2%;
+  }
+
+  .word-group {
+    gap: 2.5px;
+  }
+
+  .word-group:first-child {
+    margin-right: 16px;
+  }
+
+  .car {
+    width: clamp(160px, 38vw, 280px);
+    left: -38vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .track-system {
+    height: 104px;
+  }
+
+  .track-base,
+  .track-revealed {
+    height: 102px;
+  }
+
+  .letter {
+    font-size: 48px;
+  }
+
+  .letters-container {
+    gap: 2px;
+    padding: 0 1.5%;
+  }
+
+  .word-group {
+    gap: 2px;
+  }
+
+  .word-group:first-child {
+    margin-right: 14px;
+  }
+
+  .car {
+    width: clamp(140px, 40vw, 240px);
+    left: -40vw;
+  }
+}
+
+@media (max-width: 375px) {
+  .track-system {
+    height: 94px;
+  }
+
+  .track-base,
+  .track-revealed {
+    height: 92px;
+  }
+
+  .letter {
+    font-size: 40px;
+  }
+
+  .letters-container {
+    gap: 1.8px;
+    padding: 0 1%;
+  }
+
+  .word-group {
+    gap: 1.8px;
+  }
+
+  .word-group:first-child {
+    margin-right: 12px;
+  }
+
+  .car {
+    width: clamp(120px, 42vw, 200px);
+    left: -42vw;
+  }
+}
+
+@media (max-width: 320px) {
+  .track-system {
+    height: 84px;
+  }
+
+  .track-base,
+  .track-revealed {
+    height: 82px;
+  }
+
+  .letter {
+    font-size: 34px;
+  }
+
+  .letters-container {
+    gap: 1.5px;
+    padding: 0 1%;
+  }
+
+  .word-group {
+    gap: 1.5px;
+  }
+
+  .word-group:first-child {
+    margin-right: 10px;
+  }
+
+  .car {
+    width: clamp(100px, 45vw, 180px);
+    left: -45vw;
+  }
+}
